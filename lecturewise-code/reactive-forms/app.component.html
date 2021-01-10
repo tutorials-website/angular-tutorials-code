@@ -1,0 +1,31 @@
+<div>
+
+   <div class="col-md-6">
+    <h1>Contact Form</h1>
+
+    <form [formGroup]="contactForm" class="form" (ngSubmit)="formSubmit(contactForm.value)">
+
+      <div class="form-group">
+       <input type="text" formControlName="yourname" placeholder="Enter your name" required class="form-control" >
+     
+      </div>
+
+      <div class="form-group">
+        <input type="email" formControlName="email" placeholder="Enter your email" required class="form-control" >
+       
+      </div>
+
+       <div class="form-group">
+        <input type="text" formControlName="mobile" minlength="10" maxlength="12" placeholder="Enter your mobile" required class="form-control">
+      
+      </div>
+       <div class="form-group">
+        <input type="submit" name="Send" class="btn btn-success">
+       
+       </div>
+
+    </form>
+
+    </div>
+</div>
+<router-outlet></router-outlet>

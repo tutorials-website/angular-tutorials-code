@@ -9,7 +9,7 @@ import { CustompipePipe } from './custompipe.pipe';
 import { HomeComponent } from './home/home.component';
 import { PagenotfoundComponent } from './pagenotfound/pagenotfound.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
-import {FormsModule} from '@angular/forms';
+import {ReactiveFormsModule} from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -24,7 +24,7 @@ import {FormsModule} from '@angular/forms';
     AppRoutingModule,
     CustomerModule,
     NgbModule,
-    FormsModule
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

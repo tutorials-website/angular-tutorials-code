@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import {Router} from '@angular/router';
+import { FormGroup, FormControl } from '@angular/forms';
 
      
 @Component({
@@ -12,12 +13,20 @@ templateUrl: './app.component.html',
 export class AppComponent {
   
  users={
-    name:"Tutorialsweb",
-    email:"test@gmail.com",
-    mobile:9999993456
+    name:"",
+    email:"",
+    mobile:''
 }
 
-  formSubmit(val){
+contactForm = new FormGroup({
+
+  yourname: new FormControl(''),
+  email: new FormControl(''),
+  mobile: new FormControl(''),
+  
+});  
+
+formSubmit(val){
 
    // console.log(val);
    var name= val.yourname;
