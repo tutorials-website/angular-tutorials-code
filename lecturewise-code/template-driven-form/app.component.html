@@ -1,0 +1,33 @@
+<div>
+
+   <div class="col-md-6">
+    <h1>Contact Form</h1>
+    <form #contactForm="ngForm" 
+    class="form" 
+    (ngSubmit)="formSubmit(contactForm.value)">
+
+      <div class="form-group">
+       <input type="text" name="yourname" placeholder="Enter your name" #yourname="ngModel" required class="form-control" [ngModel]="users.name">
+      <span class="error" *ngIf="yourname.invalid && yourname.touched">Please Enter Your Name</span>
+      </div>
+
+      <div class="form-group">
+        <input type="email" name="email" placeholder="Enter your email" #email="ngModel" required class="form-control" [ngModel]="users.email">
+        <span class="error" *ngIf="email.invalid && email.touched">Please Enter Your Email</span> 
+      </div>
+
+       <div class="form-group">
+        <input type="text" name="mobile" minlength="10" maxlength="12" placeholder="Enter your mobile" #mobile="ngModel" required class="form-control" [ngModel]="users.mobile">
+        <span class="error" *ngIf="mobile.invalid && mobile.touched">Please Enter Your Mobile</span> 
+      </div>
+       <div class="form-group">
+        <input type="submit" name="Send" [disabled]="contactForm.invalid" class="btn btn-success">
+        <input type="button" value="Reset" class="btn btn-primary" (click)="contactForm.reset();">
+       </div>
+
+    </form>
+
+
+    </div>
+</div>
+<router-outlet></router-outlet>
