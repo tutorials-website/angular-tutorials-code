@@ -1,0 +1,10 @@
+.mainContent{margin:auto;width:100%;text-align: center;}
+h1{color:red;}
+.redText{color:red;}
+input.ng-touched.ng-invalid{
+    border: 1px solid red;
+}
+input.ng-touched.ng-valid{
+    border: 1px solid green;
+}
+.error{color:red}
