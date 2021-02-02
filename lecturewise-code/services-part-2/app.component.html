@@ -1,0 +1,36 @@
+<!--<div>
+
+   <div class="col-md-6">
+    <h1>Contact Form</h1>
+
+    <form [formGroup]="contactForm" class="form" >
+
+      <div class="form-group">
+       <input type="text" formControlName="yourname" placeholder="Enter your name"  class="form-control" >
+     
+      </div>
+
+      <div class="form-group">
+        <input type="email" formControlName="emailid" placeholder="Enter your email"  class="form-control" >
+       
+      </div>
+
+       <div class="form-group">
+        <input type="text" formControlName="mobile" minlength="10" maxlength="12" placeholder="Enter your mobile"  class="form-control">
+      
+      </div>
+       <div class="form-group">
+        <input type="submit" name="Send" (click)="postData()" class="btn btn-success">
+        &nbsp;&nbsp;<a (click)="setData()" class="btn btn-primary">Set Value</a>
+        &nbsp;&nbsp;<a (click)="resetData()" class="btn btn-info">Reset</a>
+       
+       </div>
+
+    </form>
+
+    </div>
+</div>-->
+<h1>Services in Angular</h1>
+<p>{{name}}</p>
+<p>{{address}}</p>
+<router-outlet></router-outlet>
