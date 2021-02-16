@@ -1,0 +1,62 @@
+<!--<div>
+
+   <div class="col-md-6">
+    <h1>Contact Form</h1>
+
+    <form [formGroup]="contactForm" class="form" >
+
+      <div class="form-group">
+       <input type="text" formControlName="yourname" placeholder="Enter your name"  class="form-control" >
+     
+      </div>
+
+      <div class="form-group">
+        <input type="email" formControlName="emailid" placeholder="Enter your email"  class="form-control" >
+       
+      </div>
+
+       <div class="form-group">
+        <input type="text" formControlName="mobile" minlength="10" maxlength="12" placeholder="Enter your mobile"  class="form-control">
+      
+      </div>
+       <div class="form-group">
+        <input type="submit" name="Send" (click)="postData()" class="btn btn-success">
+        &nbsp;&nbsp;<a (click)="setData()" class="btn btn-primary">Set Value</a>
+        &nbsp;&nbsp;<a (click)="resetData()" class="btn btn-info">Reset</a>
+       
+       </div>
+
+    </form>
+
+    </div>
+</div>
+<p>{{name}}</p>
+<p>{{address}}</p>
+-->
+
+<div style="text-align: center;">
+  <h1>How to call API in Angular</h1>
+<table border="1"> 
+  <tr>
+    <th>ID</th>
+    <th>Name</th>
+    <th>Email</th>
+    <th>Phone</th>
+    <th>Username</th>
+    <th>Website</th>
+    <th>Address</th>
+    <th>Company</th>
+  </tr>
+  <tr *ngFor="let user of userData">
+    <td>{{user.id}}</td>
+    <td>{{user.name}}</td>
+    <td>{{user.email}}</td>
+    <td>{{user.phone}}</td>
+    <td>{{user.username}}</td>
+    <td>{{user.website}}</td>
+    <td>{{user.address.street}}, {{user.address.city}} - {{user.address.zipcode}}</td>
+    <td>{{user.company.name}}</td>
+  </tr>
+</table>
+</div>
+<router-outlet></router-outlet>
