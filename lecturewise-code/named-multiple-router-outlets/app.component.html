@@ -1,0 +1,11 @@
+<div style="text-align: center;">
+  <h1>Named & Multiple Router Outlets</h1>
+<a routerLink="customer">Customer</a><br>
+<a [routerLink]="[{outlets:{customerList:['customerdetails']}}]">Customer Details</a><br>
+<a [routerLink]="[{outlets:{customerOrderList:['order']}}]">Order</a>
+</div>
+
+<router-outlet></router-outlet>
+<router-outlet name="customerList"></router-outlet>
+<router-outlet name="customerOrderList"></router-outlet>
+

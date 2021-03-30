@@ -1,0 +1,8 @@
+<h2>Customer Details</h2>
+<ul>
+    <li *ngFor="let custdata of customerarray" >
+       <b>ID:</b> {{custdata.id}} <b>Name:</b>{{custdata.name}}<b>Email:</b>{{custdata.email}}<b>Phone: </b>{{custdata.phone}}
+    </li>
+</ul>
+<p>&nbsp;</p>
+<button type="button" (click)="close()">Close</button>
